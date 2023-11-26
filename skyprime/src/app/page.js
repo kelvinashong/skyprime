@@ -50,7 +50,7 @@ export default function Home() {
             </h1>
           ) : null}
 
-          <h1 className="mt-10">icon</h1>
+          <h1 className="mt-10">icons</h1>
           {data.main ? (
             <h1 className="mt-10 text-5xl font-mono">{data.main.temp.toFixed()}&deg;C</h1>
           ) : null}
