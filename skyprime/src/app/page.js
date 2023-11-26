@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <main className="mt-10 text-xs ">
-      <div className="mt-10 ml-5">
+      <div className="mt-10 ml-20 ">
         <input
           className="h-10 w-40 pl-2  border-b-2"
           label="city"
@@ -34,14 +34,14 @@ export default function Home() {
           onKeyPress={searchLocation}
         />
       </div>
-      <div className="mt-1 ml-5 ">
+      {/* <div className="mt-1 ml-20 ">
         <button
           // onCick={handleSearch}
           className="border-2 p-2 rounded-lg"
         >
           Search
         </button>
-      </div>
+      </div> */}
       <div className="border-4 border-black mt-10 w-3/4 h-96 ml-10 rounded-lg">
         <div className="text-center mt-12">
           {data.sys ? (
@@ -50,7 +50,7 @@ export default function Home() {
             </h1>
           ) : null}
 
-          <h1 className="mt-10">icons</h1>
+          <h1 className="mt-10">icon</h1>
           {data.main ? (
             <h1 className="mt-10 text-5xl font-mono">{data.main.temp.toFixed()}&deg;C</h1>
           ) : null}
