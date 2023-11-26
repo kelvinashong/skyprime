@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <main className="mt-10 text-xs ">
-      <h1 className='font-mono font-bold ml-5 mt-10 '>skyPrime</h1>
+      <h1 className='font-mono font-bold ml-10 mt-10 '>skyPrime</h1>
       <div className="mt-10 ml-20 ">
         <input
           className="h-10 w-40 pl-2  border-b"
@@ -46,7 +46,7 @@ export default function Home() {
       <div className=" mt-12 shadow-2xl bg-slate-200  w-3/4 h-96 ml-10 rounded-lg">
         <div className="text-center mt-12 pt-16">
           {data.sys ? (
-            <h1 className="font-mono font-medium">
+            <h1 className="font-mono font-medium text-slate-400">
               {data.name} - {data.sys.country}{' '}
             </h1>
           ) : null}
