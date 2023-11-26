@@ -23,9 +23,10 @@ export default function Home() {
 
   return (
     <main className="mt-10 text-xs ">
+      <h1 className='font-mono font-bold ml-5 mt-10 '>skyPrime</h1>
       <div className="mt-10 ml-20 ">
         <input
-          className="h-10 w-40 pl-2  border-b-2"
+          className="h-10 w-40 pl-2  border-b"
           label="city"
           type="text"
           value={location}
@@ -42,21 +43,23 @@ export default function Home() {
           Search
         </button>
       </div> */}
-      <div className="border-4 border-black mt-10 w-3/4 h-96 ml-10 rounded-lg">
-        <div className="text-center mt-12">
+      <div className=" mt-12 shadow-2xl bg-slate-200  w-3/4 h-96 ml-10 rounded-lg">
+        <div className="text-center mt-12 pt-16">
           {data.sys ? (
-            <h1 className="font-mono">
+            <h1 className="font-mono font-medium">
               {data.name} - {data.sys.country}{' '}
             </h1>
           ) : null}
-
-          <h1 className="mt-10">icon</h1>
+{data.weather ? (
+            <h1 className="mt-10">{data.weather[0].icon}</h1>
+          ) : null}
+          
           {data.main ? (
-            <h1 className="mt-10 text-5xl font-mono">{data.main.temp.toFixed()}&deg;C</h1>
+            <h1 className="mt-10 text-5xl font-mono font-bold">{data.main.temp.toFixed()}&deg;C</h1>
           ) : null}
 
           {data.weather ? (
-            <h1 className="mt-10 mb-20 text-xs font-mono">
+            <h1 className="mt-10 mb-20 text-xs font-mono font-semibold px-4">
               {' '}
               We are having {' '}{data.weather[0].description} {' '} now
             </h1>
